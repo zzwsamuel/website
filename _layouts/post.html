@@ -1,0 +1,22 @@
+---
+layout: default
+---
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<div class="cover" style="background-image: url('{{ site.url }}{{ site.baseurl }}{{ page.image }}');"></div>
+
+<small class="meta">
+  <time datetime="{{ page.date }}">{{ page.date | date: '%d/%m/%Y' }}</time>
+  {% if page.tags %}
+  <span class="tags">
+    {{ page.tags | join: ', ' }}
+  </span>
+  {% endif %}
+</small>
+
+<h1>{{ page.title }}</h1>
+<p>{{ page.description }}</p>
+
+{{ content }}
